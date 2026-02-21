@@ -1,5 +1,5 @@
 import img from "../assets/how.png";
-import check from "../assets/check.png";
+import check from "../assets/Check.png";
 import challenge from "../assets/challenge.png";
 import profit from "../assets/profit.png";
 import pass from "../assets/pass.png";
