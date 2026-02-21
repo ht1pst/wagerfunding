@@ -1,0 +1,39 @@
+@import "tailwindcss";
+h1, h2, h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; /* bold */
+}
+
+a{
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+p{
+   font-family: 'Bricolage Grotesque', sans-serif;
+  
+}
+button{
+   font-family: 'Bricolage Grotesque', sans-serif;
+  
+}
+
+.chance p{
+ font-family: 'Barlow Condensed', sans-serif;
+}
+
+
+.chance h1{
+ font-family: 'Barlow Condensed', sans-serif;
+}
+
+@keyframes marque {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marque {
+  animation: marque 18s linear infinite;
+}
