@@ -1,4 +1,4 @@
-import img from "../assets/checkout.png";
+import img from "../assets/Checkout.png";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo2.png";
 import bit from "../assets/bitcoin.png";
