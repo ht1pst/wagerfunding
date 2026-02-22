@@ -80,41 +80,41 @@ const [menuOpen, setMenuOpen] = useState(false);
 
    <p className="text-[32px]  text-white">Billing Information</p>
 
-<div className="lg:h-[474px] h-[580px] lg:w-[590px] mt-3 bg-white/10 backdrop-blur-[5px] border border-[#FFFFFF1A] rounded-xl px-[20px] pt-5">
+<div className="lg:h-[474px] h-[580px] text-white lg:w-[590px] mt-3 bg-white/10 backdrop-blur-[5px] border border-[#FFFFFF1A] rounded-xl px-[20px] pt-5">
     <div className="flex lg:flex-row flex-col gap-[12px]">
         <div>
             <p className="text-[15px] text-white">First Name</p>
-            <input type="text" className="lg:w-[280px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[280px] w-[100%] px-3 h-[40px] bg-black rounded-xl mt-3" />
         </div>
         <div>
               <p className="text-[15px] text-white">Last Name</p>
-            <input type="text" className="lg:w-[280px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[280px] w-[100%] px-3 h-[40px] bg-black rounded-xl mt-3" />
         </div>
     </div>
 
  <div className="mt-4">
      <p className="text-[15px] text-white">Email Address</p>
-    <input type="text" className="lg:w-[560px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
+    <input type="text" className="lg:w-[560px] w-[100%] h-[40px] px-3 bg-black rounded-xl mt-3" />
         </div>
 
 
  <div className="mt-4">
               <p className="text-[15px] text-white">Country</p>
-            <input type="text" className="lg:w-[560px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[560px] w-[100%] px-3 h-[40px] bg-black rounded-xl mt-3" />
         </div>
 
 
 
          <div className="mt-4">
               <p className="text-[15px] text-white">Street Address</p>
-            <input type="text" className="lg:w-[560px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[560px] w-[100%] px-3 h-[40px] bg-black rounded-xl mt-3" />
         </div>
 
 
 
          <div className="mt-4">
               <p className="text-[15px] text-white">Town/City</p>
-            <input type="text" className="lg:w-[560px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[560px] w-[100%] px-3 h-[40px] bg-black rounded-xl mt-3" />
         </div>
 </div>
 </div>
@@ -126,11 +126,11 @@ const [menuOpen, setMenuOpen] = useState(false);
 
     <p className="text-[24px] text-white">Apply Coupon</p>
 
-    <div className="bg-white/10 backdrop-blur-[5px] border border-[#FFFFFF1A] lg:h-[98px] h-[130px] pt-2 lg:px-2 px-[20px] rounded-lg lg:w-[428px] mt-4 ">
-        <p className="text-[#FFFFFF80] ">If you have a coupon code, please apply it below</p>
-        <div className="flex  gap-8 mt-3 lg:items-center items-center">
+    <div className="bg-white/10 backdrop-blur-[5px] border border-[#FFFFFF1A] lg:h-[98px] h-[130px] pt-2 lg:px-2  rounded-lg lg:w-[428px] mt-4 ">
+        <p className="text-[#FFFFFF80] px-[20px] ">If you have a coupon code, please apply it below</p>
+        <div className="flex  lg:gap-8 justify-between px-[20px] mt-3 lg:items-center items-center">
         <input type="text" name="" id="" placeholder="coupon code"  className="text-[#FFFFFF80] lg:w-[246px] w-[150px] bg-black h-[40px] rounded-lg px-3"/>
-        <button className="bg-white text-black text-[10px] lg:h-2 h-[1px] flex justify-center items-center lg:w-[104px] w-[50px]  rounded-sm border-0 font-bold shadow-[0_0_10px_20px_rgba(255,255,255,3.5)]">
+        <button className="bg-white text-black text-[10px] lg:h-2 h-[1px] flex justify-center items-center lg:w-[104px] w-[50px]  rounded-sm border-0 font-bold shadow-[0_0_10px_20px_rgba(255,255,255,3.5)] mr-10">
 Apply
 </button>
         </div>
