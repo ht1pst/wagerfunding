@@ -5,96 +5,132 @@ import bit from "../assets/bitcoin.png";
 import { useState } from "react";
 function ChaSection1(){
 const [selected, setSelected] = useState(null);
+const [menuOpen, setMenuOpen] = useState(false);
 
     return(
-        <section  className="min-h-screen bg-black h-320"
+        <section  className="min-h-screen bg-black lg:h-420 h-680 px-[20px] "
               style={{
                 backgroundImage: `url(${img})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
                 backgroundRepeat: "no-repeat",
               }}>
-<header className="flex items-center justify-between px-[40px] pt-5">
-    <div>
-<img src={logo} alt="" className="w-35" />
-    </div>
+<header className="flex items-center justify-between px-6 md:px-[40px] pt-5 relative">
 
-    <div className="flex text-[#014B37] gap-10 text-[16px] font-semibold">
-        <Link to="/">How It Works</Link> 
+      {/* Logo */}
+      <div>
+        <img src={logo} alt="" className="lg:w-28 md:w-35 w-18" />
+      </div>
+
+      {/* Desktop Nav */}
+      <div className="hidden md:flex text-[#00FFB9] gap-10 text-[16px] font-semibold">
+        <Link to="/">How It Works</Link>
         <Link to="/review">Reviews</Link>
-          <Link to="/challenge" >Challenges</Link>
+        <Link to="/challenge">Challenges</Link>
+        <Link to="/faq">FAQs</Link>
+        <Link to="/contact">Contact Us</Link>
+      </div>
+
+      {/* Desktop Buttons */}
+      <div className="hidden md:flex items-center gap-5">
+        <a href="#" className="text-[#014B37] text-[16px] font-semibold">
+          Login
+        </a>
+
+        <button className="flex items-center bg-[#014B37] gap-2 text-white h-10 px-6 justify-center rounded-xl text-[16px] font-semibold">
+          Start A Challenge
+        </button>
+      </div>
+
+      {/* Mobile Hamburger */}
+      <button
+        className="md:hidden text-[#014B37]"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="absolute top-20 left-0 w-full bg-white shadow-lg flex flex-col items-center gap-6 py-6 md:hidden z-50">
+
+          <Link to="/">How It Works</Link>
+          <Link to="/review">Reviews</Link>
+          <Link to="/challenge">Challenges</Link>
           <Link to="/faq">FAQs</Link>
-            <Link to="/contact">Contact Us</Link>
-    </div>
+          <Link to="/contact">Contact Us</Link>
 
-    <div className="flex items-center gap-5"> 
-        <a href="#" className="text-[#014B37] text-[16px] font-semibold">Login</a>
-        <div>
-            <button className="flex items-center bg-[#014B37] gap-2 text-white h-10 w-50 justify-center rounded-xl text-[16px] font-semibold">Start A Challenge <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="12px" fill="#ffffff"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></span></button>
+          <a href="#" className="font-semibold">
+            Login
+          </a>
+
+          <button className="bg-[#014B37] text-white px-6 py-2 rounded-xl">
+            Start A Challenge
+          </button>
         </div>
-    </div>
-</header>
+      )}
+    </header>
 
-<div className="pt-15">
-    <h1 className="chance text-white text-[64px] flex justify-center">START YOUR CHALLENGE</h1>
+<div className="pt-15 lg:px-[20px]">
+    <h1 className="chance text-white lg:text-[64px] text-[35px] text-center flex justify-center">START YOUR CHALLENGE</h1>
 
-    <div className="flex justify-center gap-[37px] mt-10">
+    <div className="flexflex-col justify-center gap-[37px] mt-10">
  
 <div>
 
    <p className="text-[32px]  text-white">Billing Information</p>
 
-<div className="h-[474px] w-[590px] mt-3 bg-white/10 backdrop-blur-[5px] border border-[#FFFFFF1A] rounded-xl px-[20px] pt-5">
-    <div className="flex gap-[12px]">
+<div className="lg:h-[474px] h-[580px] lg:w-[590px] mt-3 bg-white/10 backdrop-blur-[5px] border border-[#FFFFFF1A] rounded-xl px-[20px] pt-5">
+    <div className="flex lg:flex-row flex-col gap-[12px]">
         <div>
             <p className="text-[15px] text-white">First Name</p>
-            <input type="text" className="w-[274px] h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[280px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
         </div>
         <div>
               <p className="text-[15px] text-white">Last Name</p>
-            <input type="text" className="w-[274px] h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[280px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
         </div>
     </div>
 
  <div className="mt-4">
      <p className="text-[15px] text-white">Email Address</p>
-    <input type="text" className="w-[560px] h-[40px] bg-black rounded-xl mt-3" />
+    <input type="text" className="lg:w-[560px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
         </div>
 
 
  <div className="mt-4">
               <p className="text-[15px] text-white">Country</p>
-            <input type="text" className="w-[560px] h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[560px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
         </div>
 
 
 
          <div className="mt-4">
               <p className="text-[15px] text-white">Street Address</p>
-            <input type="text" className="w-[560px] h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[560px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
         </div>
 
 
 
          <div className="mt-4">
               <p className="text-[15px] text-white">Town/City</p>
-            <input type="text" className="w-[560px] h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[560px] w-[100%] h-[40px] bg-black rounded-xl mt-3" />
         </div>
 </div>
 </div>
 
 
 
-<div>
+<div className="mt-20">
     
 
     <p className="text-[24px] text-white">Apply Coupon</p>
 
-    <div className="bg-white/10 backdrop-blur-[5px] border border-[#FFFFFF1A] h-[98px] pt-2 px-2 rounded-lg w-[428px] mt-4 ">
-        <p className="text-[#FFFFFF80]">If you have a coupon code, please apply it below</p>
-        <div className="flex gap-8 mt-3 items-center">
-        <input type="text" name="" id="" placeholder="coupon code"  className="text-[#FFFFFF80] w-[246px] bg-black h-[40px] rounded-lg px-3"/>
-        <button className="bg-white text-black text-[10px] h-2 w-[104px]  rounded-sm border-0 font-bold shadow-[0_0_10px_20px_rgba(255,255,255,3.5)]">
+    <div className="bg-white/10 backdrop-blur-[5px] border border-[#FFFFFF1A] lg:h-[98px] h-[130px] pt-2 lg:px-2 px-[20px] rounded-lg lg:w-[428px] mt-4 ">
+        <p className="text-[#FFFFFF80] ">If you have a coupon code, please apply it below</p>
+        <div className="flex  gap-8 mt-3 lg:items-center items-center">
+        <input type="text" name="" id="" placeholder="coupon code"  className="text-[#FFFFFF80] lg:w-[246px] w-[150px] bg-black h-[40px] rounded-lg px-3"/>
+        <button className="bg-white text-black text-[10px] lg:h-2 h-[1px] flex justify-center items-center lg:w-[104px] w-[50px]  rounded-sm border-0 font-bold shadow-[0_0_10px_20px_rgba(255,255,255,3.5)]">
 Apply
 </button>
         </div>
@@ -180,7 +216,7 @@ Apply
 
 <div className="px-[20px]">
 <button
-  className="bg-white text-[#014B37] h-5 w-[344px]  rounded-sm border-0 font-bold
+  className="bg-white text-[#014B37] h-5 lg:w-[344px] w-[100%]  rounded-sm border-0 font-bold
              shadow-[0_0_10px_20px_rgba(255,255,255,3.5)] mt-10 "
 >
   START A CHALLENGE
@@ -199,6 +235,34 @@ Apply
 
 
 
+
+</div>
+<div className="flex justify-center mt-20">
+
+<div className="flex  flex-col lg:flex-row bg-white/10 backdrop-blur-[5px] border border-[#FFFFFF1A] text-[18px] rounded-xl text-white lg:justify-around gap-15 px-[40px] lg:h-[325px] h-[655px] w-[1240px] pt-10">
+
+    <div className="flex flex-col lg:gap-[120px] gap-[20px]">
+<img src={logo} alt="" className="h-[32px] w-[72px]"/>
+<p>All rights Reserved</p>
+    </div>
+
+
+    <div className="flex flex-col gap-[20px]">
+<p className="text-[#808080] text-[16px]">QUICK LINKS</p>
+<a href="#">Home</a>
+<a href="#">How it works</a>
+<a href="#">Challenges</a>
+<a href="#">Contact</a>
+<a href="#">FAQs</a>
+    </div>
+
+     <div className="flex flex-col gap-[20px]">
+        <p className="text-[#808080] text-[16px]">COMPANY</p>
+<a href="#">Terms & Condition</a>
+<a href="#">Privacy</a>
+     </div>
+    
+</div>
 
 </div>
 
