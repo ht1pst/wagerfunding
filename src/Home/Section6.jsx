@@ -31,7 +31,7 @@ function Section6() {
   ];
 
   return (
-    <section className="bg-black lg:h-200 h-190">
+    <section className="bg-black lg:h-200 h-auto pb-10">
       <div className="lg:pt-30 px-5 lg:px-0">
         <h1 className="rounded-lg text-white flex justify-center text-4xl font-semibold">
           FAQ

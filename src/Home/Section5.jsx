@@ -50,7 +50,7 @@ function Section5(){
 
 <div className="mt-10">
 
-<div className="bg-[#181717] #181717 h-85 pt-10 px-[20px] rounded-xl border border-[#00d084]">
+<div className="bg-[#181717] #181717 h-85 pt-10 px-[20px] rounded-xl border ">
 
     <div className="leading-[20px]">
     <h1 className="text-[26px] text-white">Bankroll Problems?</h1>
@@ -63,7 +63,7 @@ function Section5(){
 
 </div>
 
-<div className="bg-[#181717] #181717 h-85 pt-10 px-[20px] rounded-xl border border-[#00d084] mt-4">
+<div className="bg-[#181717] #181717 h-85 pt-10 px-[20px] rounded-xl border  mt-4">
     <div className="flex justify-center">
     <img src={frame2} alt="" className="w-[95%]" />
     </div>
@@ -83,7 +83,7 @@ function Section5(){
 
 <div className="mt-4">
 
-<div className="bg-[#181717] #181717 h-100 pt-10 px-[20px] rounded-xl border border-[#00d084]">
+<div className="bg-[#181717] #181717 h-100 pt-10 px-[20px] rounded-xl border ">
 
     <div className="leading-[20px]">
     <h1 className="text-[26px] text-white">Play What You Know Best</h1>
@@ -96,7 +96,7 @@ function Section5(){
 
 </div>
 
-<div className="bg-[#181717] #181717 h-85 pt-10 px-[20px] rounded-xl border border-[#00d084] mt-4">
+<div className="bg-[#181717] #181717 h-85 pt-10 px-[20px] rounded-xl border  mt-4">
     <div className="flex justify-center">
     <img src={frame4} alt="" className="w-[95%]" />
     </div>
