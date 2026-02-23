@@ -24,11 +24,12 @@ const [menuOpen, setMenuOpen] = useState(false);
 
       {/* Desktop Nav */}
       <div className="hidden md:flex text-[#00FFB9] gap-10 text-[16px] font-semibold">
-        <Link to="/">How It Works</Link>
-        <Link to="/review">Reviews</Link>
+        <Link to="/#home">Home</Link>
+        <Link to="/#work">How It Works</Link>
+        <Link to="/#reviews">Reviews</Link>
         <Link to="/challenge">Challenges</Link>
-        <Link to="/faq">FAQs</Link>
-        <Link to="/contact">Contact Us</Link>
+      <Link to="/#faq">FAQs</Link>
+       
       </div>
 
       {/* Desktop Buttons */}
@@ -54,12 +55,11 @@ const [menuOpen, setMenuOpen] = useState(false);
       {menuOpen && (
         <div className="absolute top-20 left-0 w-full bg-white shadow-lg flex flex-col items-center gap-6 py-6 md:hidden z-50">
 
-          <Link to="/">How It Works</Link>
-          <Link to="/review">Reviews</Link>
-          <Link to="/challenge">Challenges</Link>
-          <Link to="/faq">FAQs</Link>
-          <Link to="/contact">Contact Us</Link>
-
+          <Link to="/#home">Home</Link>
+        <Link to="/#work">How It Works</Link>
+        <Link to="/#reviews">Reviews</Link>
+        <Link to="/challenge">Challenges</Link>
+      <Link to="/#faq">FAQs</Link>
           <a href="#" className="font-semibold">
             Login
           </a>
@@ -74,7 +74,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 <div className="pt-15 lg:px-[20px]">
     <h1 className="chance text-white lg:text-[64px] text-[35px] text-center flex justify-center">START YOUR CHALLENGE</h1>
 
-    <div className="flexflex-col justify-center gap-[37px] mt-10">
+    <div className="flex flex-col lg:flex-row justify-center gap-[37px] mt-10">
  
 <div>
 
@@ -84,11 +84,11 @@ const [menuOpen, setMenuOpen] = useState(false);
     <div className="flex lg:flex-row flex-col gap-[12px]">
         <div>
             <p className="text-[15px] text-white">First Name</p>
-            <input type="text" className="lg:w-[280px] w-[100%] px-3 h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[275px] w-[100%] px-3 h-[40px] bg-black rounded-xl mt-3" />
         </div>
         <div>
               <p className="text-[15px] text-white">Last Name</p>
-            <input type="text" className="lg:w-[280px] w-[100%] px-3 h-[40px] bg-black rounded-xl mt-3" />
+            <input type="text" className="lg:w-[275px] w-[100%] px-3 h-[40px] bg-black rounded-xl mt-3" />
         </div>
     </div>
 
@@ -121,7 +121,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
 
-<div className="mt-20">
+<div className="mt-20 lg:mt-0">
     
 
     <p className="text-[24px] text-white">Apply Coupon</p>

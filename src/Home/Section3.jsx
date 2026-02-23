@@ -1,6 +1,6 @@
 import profit from "../assets/profit.png";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 function Section3() {
   const [activeCategory, setActiveCategory] = useState("instant");
   const [activeIndex, setActiveIndex] = useState(null);
@@ -110,20 +110,42 @@ const prices = {
   };
 
   return (
-    <section className="bg-black h-330 px-[20px] pt-10">
+    <section className="bg-black h-330 lg:h-280 px-[20px] pt-10">
       <div>
-        <img src={profit} alt="" className="lg:w-80 w-60 flex justify-center mx-auto" />
-        <h1 className="lg:text-[64px] text-[50px] text-center font-bold text-white flex justify-center mx-auto leading-[50px]">
+        <motion.img src={profit} alt="" className="lg:w-80 w-60 flex justify-center mx-auto"
+         initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        />
+        <motion.h1 className="lg:text-[64px] text-[50px] text-center font-bold text-white flex justify-center mx-auto leading-[50px]"
+         initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
           Start Your Challenge Now
-        </h1>
-        <p className="lg:text-[23px] text-[18px] text-white flex justify-center text-center lg:w-270 mx-auto mt-5">
+        </motion.h1>
+
+
+        <motion.p className="lg:text-[23px] text-[18px] text-white flex justify-center text-center lg:w-270 mx-auto mt-5"
+         initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
           Select a capital tier that fits your strategy. Meet performance goals,
           control drawdowns, And gain access to larger bankrolls. backed by our
           support.
-        </p>
+        </motion.p>
       </div>
 
-      <div className="flex lg:justify-center justify-around gap-1 bg-[#191919] lg:w-[800px] rounded-2xl mx-auto mt-7 h-[63px]">
+      <motion.div className="flex lg:justify-center justify-around gap-1 bg-[#191919] lg:w-[800px] rounded-2xl mx-auto mt-7 h-[63px]"
+       initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      >
         <h1
           className={`lg:text-[24px] text-[21px] lg:w-[258px] w-[100px]  rounded-2xl flex justify-center text-center leading-[25px] items-center ${
             activeCategory === "instant"
@@ -156,14 +178,19 @@ const prices = {
         >
           STEP2
         </h1>
-      </div>
+      </motion.div>
 
-   <div className="flex justify-center items-center mt-10">
+   <motion.div className="flex justify-center items-center mt-10"
+    initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+   >
   {tableData[activeCategory].map((item, index) => (
     <div
       key={index}
       className="bg-[#191919] w-[800px] min-h-[63px] rounded-xl 
-                 flex flex-wrap gap-4 px-[20px] py-3 mx-auto justify-center
+                 flex flex-wrap gap-4 lg:justify-around px-[20px] py-3 mx-auto justify-center
                  items-center text-white text-[24px] font-bold"
     >
       {Object.values(item).map((value, i) => (
@@ -179,10 +206,15 @@ const prices = {
       ))}
     </div>
   ))}
-</div>
+</motion.div>
 
 
-   <div>
+   <motion.div
+    initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+   >
   {tableDets[activeCategory]?.map((item, index) => (
     <div key={index} className="flex justify-center">
       <div className="bg-black text-white rounded-xl mt-4 flex  gap-6 justify-between lg:w-[792px] h-[407px] border border-[#FFFFFF1A] lg:text-[22px] text-[18px]">
@@ -211,10 +243,15 @@ const prices = {
       </div>
     </div>
   ))}
-</div>
+</motion.div>
 
 
-<div className="flex flex-col lg:flex-row items-center gap-10 lg:justify-between lg:px-[20px] lg:w-[776px] bg-[#191919] lg:h-[92px] h-[170px]  rounded-xl mx-auto mt-7 pt-3">
+<motion.div className="flex flex-col lg:flex-row items-center gap-10 lg:justify-between lg:px-[20px] lg:w-[776px] bg-[#191919] lg:h-[92px] h-[170px]  rounded-xl mx-auto mt-7 pt-3"
+ initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+>
 
     <div className="flex gap-3 items-end bg-[#FFFFFF1A] lg:justify-between justify-center lg:px-[10px] lg:w-[172px] w-[290px]  rounded-lg">
        <h1 className="text-[40px] text-white font-semibold text-[20px]">
@@ -235,7 +272,7 @@ const prices = {
   Buy Now
 </button>
     </div>
-</div>
+</motion.div>
 
     </section>
   );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 function Section6() {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -31,14 +31,31 @@ function Section6() {
   ];
 
   return (
-    <section className="bg-black lg:h-200 h-auto pb-10">
+    <section className="bg-black lg:h-200 h-auto pb-10" id="faq">
       <div className="lg:pt-30 px-5 lg:px-0">
-        <h1 className="rounded-lg text-white flex justify-center text-4xl font-semibold">
+        <motion.h1 className="rounded-lg text-white flex justify-center text-4xl font-semibold"
+        initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
           FAQ
-        </h1>
+        </motion.h1>
 
-       <h1 className="lg:text-[64px] text-[50px] text-center text-white flex justify-center">Know the Game. Play It Right.</h1>
-        <div className=" mx-auto space-y-4 pt-16">
+       <motion.h1 className="lg:text-[64px] text-[50px] text-center text-white flex justify-center leading-[50px]"
+       initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+       >Know the Game. Play It Right.</motion.h1>
+
+       
+        <motion.div className=" mx-auto space-y-4 pt-16"
+        initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
           {faqs.map((faq, index) => {
             const isActive = activeIndex === index;
 
@@ -74,7 +91,7 @@ function Section6() {
               </div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
