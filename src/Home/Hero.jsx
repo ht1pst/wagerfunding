@@ -141,7 +141,7 @@ initial={{ y: 50, opacity: 0 }}
 initial={{ y: 50, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
   viewport={{ once: true, amount: 0.3 }}
-  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 1.6 }}
 >
     <img src={img} alt="" className="w-150" />
 </motion.div>
