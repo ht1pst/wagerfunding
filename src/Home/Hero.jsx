@@ -88,7 +88,7 @@ function Hero(){
     <img src={img2} alt="" className="w-140" />
  </motion.div>
 <div>
-    <div className="flex flex-col lg:gap-14 leading-[52px] lg:leading-[125px]" >
+    <div className="flex flex-col lg:gap-14 leading-[32px] lg:leading-[125px]" >
     <motion.h1 className="lg:text-[80px] font-semibold text-[60px]"
     initial={{ y: 50, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
