@@ -11,11 +11,11 @@ function Hero(){
 
    return(
    <section 
-  className="min-h-screen h-250 lg:h-190 bg-black" id="home"
+  className=" h-250 xl:h-10 lg:h-190 xl:h-280 bg-black" id="home"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
-        backgroundPosition: "top",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}>
 
@@ -79,7 +79,7 @@ function Hero(){
 
 
 <div className="flex flex-col lg:flex-row justify-center lg:gap-[125px] gap-[80px]   lg:items-center pt-10 relative px-[20px]">
- <motion.div className="absolute left-15 top-40 lg:block hidden"
+ <motion.div className="absolute left-15 top-40 lg:block xl:hidden hidden"
  initial={{ y: 50, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
   viewport={{ once: true, amount: 0.3 }}
@@ -89,6 +89,16 @@ function Hero(){
  </motion.div>
 <div>
     <div className="flex flex-col lg:gap-14 leading-[32px] lg:leading-[125px]" >
+
+<motion.div className="absolute left-15 xl:left-150 xl:block top-40 lg:hidden hidden"
+ initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+ >
+    <img src={img2} alt="" className="w-140" />
+ </motion.div>
+
     <motion.h1 className="lg:text-[80px] font-semibold text-[60px]"
     initial={{ y: 50, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
@@ -141,7 +151,7 @@ initial={{ y: 50, opacity: 0 }}
 initial={{ y: 50, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
   viewport={{ once: true, amount: 0.3 }}
-  transition={{ duration: 0.8, ease: "easeOut", delay: 1.6 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
 >
     <img src={img} alt="" className="w-150" />
 </motion.div>

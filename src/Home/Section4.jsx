@@ -30,14 +30,14 @@ function Section4(){
         </div>
 
 
-<motion.div className="overflow-hidden lg:w-[80%] w-[90%] mx-auto"
+<motion.div className="overflow-hidden lg:w-[80%] xl:w-[45%]  w-[90%] mx-auto"
  initial={{ y: 50, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
   viewport={{ once: true, amount: 0.3 }}
   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
 >
 
-<div className="animate-marque whitespace-nowrap  flex ">
+<div className="animate-marque whitespace-nowrap justify-center flex ">
 
         <div className="flex justify-center lg:gap-10  gap-5 mt-10">
 
